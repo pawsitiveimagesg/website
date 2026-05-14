@@ -1,0 +1,1131 @@
+/* ============================================================
+   PAWSITIVE IMAGE — styles.css
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --Blue:  #112F66;
+  --Beige: #e3d8c6;
+  --Gold:  #C08F36;
+  --White: #FFFFFF;
+  --Black: #000000;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--Black);
+  background: var(--White);
+}
+
+/* ── NAVBAR ─────────────────────────────────────────────── */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  padding: 8px 64px;
+  background: var(--White);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.10);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-inner {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-wrap img { width: 64px; height: 48px; display: block; }
+
+.nav-links { display: flex; align-items: center; gap: 48px; }
+
+.nav-item {
+  position: relative;
+  padding: 8px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--Blue);
+  line-height: 1.5;
+  transition: background 0.2s;
+}
+
+/* sliding underline */
+.nav-item::after {
+  content: '';
+  position: absolute;
+  bottom: 6px;
+  left: 20px;
+  right: 20px;
+  height: 2px;
+  background: var(--Blue);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover::after,
+.nav-item.active::after { transform: scaleX(1); }
+
+.book-btn {
+  padding: 8px 20px;
+  border-radius: 24px;
+  border: 2px solid var(--Blue);
+  background: transparent;
+  color: var(--Blue);
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1.5;
+}
+
+.nav-book-btn {
+  display: none;
+}
+
+.book-btn:hover { background: var(--Blue); color: var(--White); }
+
+/* ── HERO ────────────────────────────────────────────────── */
+.hero {
+  width: 100%;
+  min-height: 400px;
+  padding: 64px;
+  background:
+    url('images/Quality\ pet\ services\ since\ 2015.png') center/cover no-repeat;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+ 
+.hero-text {
+  max-width: 466px;
+  color: var(--White);
+  font-family: 'Libre Baskerville', serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  animation: fadeUp 0.7s ease both;
+}
+ 
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+ 
+/* ── SERVICES ────────────────────────────────────────────── */
+.services-section {
+  width: 100%;
+  padding: 32px 64px;
+  background: var(--White);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 26vw);
+  justify-content: center; 
+  gap: 48px;
+}
+
+.service-card {
+  background: var(--White);
+  width: 26vw;
+  height: 360px;
+  border-radius: 16px;
+  box-shadow: 0 0 16px rgba(0,0,0,0.25);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+   text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.18);
+}
+
+.card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  flex-shrink: 0;
+}
+
+.card-body { padding: 24px; display: flex; flex-direction: column; gap: 8px; }
+
+.card-title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--Black);
+}
+
+.card-desc {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--Black);
+}
+
+/* ── PROMOTIONS — PDF EMBED ──────────────────────────────── */
+.promos-section {
+  width: 100%;
+  padding: 32px 64px;
+  background: var(--White);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.section-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--Blue);
+}
+
+.pdf-embed-wrap {
+  width: 100%;
+  max-width: 860px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.pdf-embed {
+  width: 595px;
+  height: 842px;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+}
+
+/* shown only while FILE_ID is not yet replaced */
+.pdf-placeholder-note {
+  font-size: 14px;
+  color: #888;
+  font-style: italic;
+  text-align: center;
+}
+
+.pdf-placeholder-note code {
+  background: #f1f5f9;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: var(--Blue);
+}
+
+/* ── ELFSIGHT PLACEHOLDER ────────────────────────────────── */
+.elfsight-placeholder {
+  width: 100%;
+  max-width: 700px;
+  padding: 40px;
+  border: 2px dashed #d1d5db;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+  color: #9ca3af;
+  font-size: 15px;
+}
+
+/* ── TESTIMONIALS ────────────────────────────────────────── */
+.testimonials-section {
+  width: 100%;
+  min-height: 320px;
+  padding: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: var(--White);
+}
+
+.testimonials-heading {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--Blue);
+  text-align: center;
+}
+
+.stars-img { width: 189px; height: 95px; object-fit: contain; }
+
+/* ── FOOTER ──────────────────────────────────────────────── */
+.footer {
+  width: 100%;
+  padding: 32px 64px;
+  background: var(--Beige);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer-inner {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  min-height: 384px;
+}
+
+/* brand */
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.footer-logo { width: 180px; height: 136px; object-fit: contain; }
+
+.social-icons { display: flex; gap: 32px; }
+
+.social-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--Blue);
+  transition: color 0.2s, transform 0.2s;
+}
+
+.social-icon:hover { color: var(--Gold); transform: scale(1.15); }
+.social-icon svg { width: 28px; height: 28px; }
+
+/* contact + find */
+.footer-contact,
+.footer-find {
+  padding: 16px 32px;
+  background: var(--Beige);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-find { flex: 1; }
+
+.footer-heading {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--Blue);
+}
+
+.footer-divider {
+  width: 100%;
+  height: 4px;
+  background: var(--Gold);
+  border-radius: 2px;
+}
+
+.footer-divider--wide { width: 100%; }
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 16px;
+  color: var(--Blue);
+}
+
+.contact-row--top { align-items: flex-start; }
+
+.contact-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  color: var(--Blue);
+}
+
+.map-img {
+  width: 100%;
+  height: 287px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: none;
+  display: block;
+}
+
+.footer-copy {
+  font-size: 16px;
+  color: var(--Blue);
+  text-align: center;
+}
+
+/* ── ABOUT PAGE HERO ─────────────────────────────────────── */
+.page-hero {
+  width: 100%;
+  min-height: 320px;
+  padding: 80px 64px;
+  background:
+    linear-gradient(rgba(17, 47, 102, 0.55), rgba(17, 47, 102, 0.55)),
+    url('images/aboutbg.jpg') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+ 
+.page-hero-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--White);
+  animation: fadeUp 0.7s ease both;
+}
+ 
+.page-hero-subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 17px;
+  color: rgba(255, 255, 255, 0.88);
+  max-width: 620px;
+  line-height: 1.8;
+}
+ 
+/* ── OUR STORY SECTION ───────────────────────────────────── */
+.page-content {
+  width: 100%;
+  padding: 64px 80px;
+  background: var(--White);
+}
+ 
+.story-block {
+  display: flex;
+  gap: 64px;
+  align-items: center;
+}
+ 
+.story-img {
+  width: 340px;
+  height: 400px;
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+ 
+.story-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+ 
+.story-label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--Gold);
+}
+ 
+.story-heading {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--Blue);
+  line-height: 1.25;
+  margin-top: -8px;
+}
+ 
+.story-divider {
+  width: 48px;
+  height: 3px;
+  background: var(--Gold);
+  border-radius: 2px;
+}
+ 
+.story-body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: var(--Blue);
+  line-height: 1.85;
+}
+ 
+.placeholder-block { display: none; }
+
+/* ── OUR TEAM ────────────────────────────────────────────── */
+.team-section {
+  width: 100%;
+  padding: 48px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  background: var(--White);
+}
+ 
+.team-heading {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--Blue);
+}
+ 
+/* Every row is the same: image left, text right, full width */
+.team-row {
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  border-radius: 16px;
+  border: 2px solid #E3D8C7;
+  overflow: hidden;
+  background: var(--White);
+}
+ 
+/* Remove --left / --right directional variants */
+.team-row--right,
+.team-row--left {
+  flex-direction: row;
+}
+ 
+/* ── Square photo ── */
+.team-photo-wrap {
+  width: 280px;
+  height: 320px;
+  flex-shrink: 0;
+  background: #E3D8C7;
+}
+ 
+.team-photo-ring { display: none; }
+ 
+.team-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+ 
+/* ── Text card ── */
+.team-card {
+  flex: 1;
+  padding: 36px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--White);
+}
+ 
+.team-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+ 
+.team-name {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--Blue);
+}
+ 
+.team-role {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--Gold);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+ 
+.team-bio {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--Blue);
+  line-height: 1.7;
+}
+ 
+.team-certs {
+  list-style: none;
+  padding: 0;
+  margin-top: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-top: 1px solid #E3D8C7;
+  padding-top: 12px;
+}
+ 
+.team-certs li {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: var(--Blue);
+  line-height: 1.6;
+  padding-left: 16px;
+  position: relative;
+}
+ 
+.team-certs li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--Gold);
+  font-size: 16px;
+  top: 3px;
+}
+ 
+.team-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+/* ── SERVICES PAGE ───────────────────────────────────────── */
+ 
+/* Hero banner */
+.services-hero-banner {
+  width: 100%;
+  height: 200px;
+  background: #B1B1B1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ 
+.services-hero-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--Blue);
+}
+ 
+/* Grooming menu PDF section */
+.grooming-menu-section {
+  width: 100%;
+  padding: 40px 64px;
+  background: var(--White);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+ 
+.pdf-embed--tall {
+ width: 595px;
+  height: 842px;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+}
+ 
+/* Tab section wrapper */
+.services-tabs-section {
+  width: 100%;
+  padding: 40px 58px;
+  background: #EAE6E5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+ 
+/* Tab bar */
+.tab-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+ 
+.tab-btn {
+  padding: 8px 20px;
+  border-radius: 24px;
+  border: 2px solid var(--Blue);
+  background: transparent;
+  color: var(--Blue);
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  line-height: 1.5;
+}
+ 
+.tab-btn:hover {
+  background: var(--Blue);
+  color: var(--White);
+}
+ 
+.tab-btn.active {
+  background: var(--Blue);
+  color: var(--White);
+  border-color: var(--Blue);
+}
+ 
+/* Tab panels */
+.tab-panel {
+  display: none;
+  width: 100%;
+  scroll-margin-top: 180px; /* adjust this value */
+}
+ 
+.tab-panel.active {
+  display: block;
+  animation: fadeUp 0.3s ease both;
+}
+ 
+/* ── Grooming tab ─────────────────────── */
+.grooming-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+ 
+.groom-card {
+  background: var(--White);
+  border-radius: 16px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+ 
+.groom-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.13);
+}
+ 
+.groom-card-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--Blue);
+  text-align: center;
+}
+ 
+.groom-checklist {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+ 
+.groom-checklist li {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--Blue);
+  padding-left: 20px;
+  position: relative;
+  line-height: 1.5;
+}
+ 
+.groom-checklist li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--Gold);
+  font-weight: 700;
+}
+ 
+.groom-disclaimer {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: #64748b;
+  font-style: italic;
+  line-height: 1.6;
+  margin-top: auto;
+  padding-top: 8px;
+  border-top: 1px solid #e2e8f0;
+}
+ 
+/* ── Add ons tab ──────────────────────── */
+.addon-list {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+ 
+.addon-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #cbd5e1;
+}
+ 
+.addon-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+ 
+.addon-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--Blue);
+  line-height: 1.5;
+}
+ 
+.addon-desc {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--Blue);
+  line-height: 1.6;
+}
+ 
+/* ── Dog Spa tab ──────────────────────── */
+.spa-list {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+ 
+.spa-card {
+  background: var(--White);
+  border-radius: 24px;
+  border: 2px solid var(--Blue);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: box-shadow 0.25s ease;
+}
+
+
+.spa-card-img {
+  width: 100%;
+  height: 400px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.spa-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+ 
+.spa-card:hover {
+  box-shadow: 0 6px 20px rgba(17,47,102,0.12);
+}
+ 
+.spa-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--Blue);
+  line-height: 1.5;
+}
+ 
+.spa-desc {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--Blue);
+  line-height: 1.6;
+}
+
+ 
+/* ── Dog Teeth Cleaning tab ───────────── */
+.teeth-content {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+ 
+.teeth-block {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+ 
+.teeth-heading {
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--Blue);
+  line-height: 1.4;
+}
+ 
+.teeth-body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--Blue);
+  line-height: 1.7;
+}
+ 
+.teeth-images {
+  display: flex;
+  gap: 24px;
+}
+ 
+.teeth-card-img {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.teeth-card-img img {
+  width: 100%;
+  height: auto;  
+  display: block;
+}
+ 
+ 
+/* shared placeholder background */
+.bg-placeholder { background: #D9D9D9; }
+
+.section-divider {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, #f0f0f0, #ddd, #f0f0f0);
+  margin: 24px 64px;
+}
+
+
+/* ── NAVBAR MOBILE ── */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
+}
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--Blue);
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+@media (max-width: 768px) {
+  .navbar { padding: 12px 20px; }
+
+  .hamburger { display: flex; }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--White);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: 8px 20px 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.10);
+  }
+
+  .nav-links.open { display: flex; }
+  .book-btn-wrap { display: none; } 
+  .nav-book-btn {
+    display: inline-flex;
+    margin-top: 12px;
+    align-self: flex-end;
+    font-size: 15px;
+  }
+
+  .section-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--Blue);
+}
+
+}
+
+@media (max-width: 768px) {
+  .hero { padding: 40px 20px; min-height: 260px; }
+  .hero-text { font-size: 28px; max-width: 100%; }
+  .hero {
+  background-image: url('images/hero-mobile.png');}
+
+  .page-hero { padding: 20px 20px; }
+  .page-hero-title { font-size: 32px; }
+  .page-hero-subtitle { font-size: 15px; }
+
+  .card-desc,
+.addon-desc,
+.spa-desc,
+.teeth-body,
+.story-body,
+.team-bio,
+.team-certs li,
+.groom-checklist li,
+.groom-disclaimer,
+.contact-row,
+.footer-copy {
+  font-size: 14px;
+}
+
+.tab-btn {
+  padding: 8px 20px;
+  border-radius: 24px;
+  border: 2px solid var(--Blue);
+  background: transparent;
+  color: var(--Blue);
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  line-height: 1.5;
+}
+
+.teeth-heading,
+.spa-title,
+.addon-title,
+.groom-card-title {
+font-size: 20px;  
+}
+}
+
+@media (max-width: 768px) {
+  .services-section { padding: 24px 20px; }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .service-card { width: 100%; height: auto; }
+  
+  .card-body { padding: 16px; display: flex; flex-direction: column; gap: 8px; }
+}
+
+@media (max-width: 768px) {
+  .promos-section { padding: 24px 16px; }
+
+  .pdf-embed,
+  .pdf-embed--tall {
+    width: 100%;
+    height: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer { padding: 24px 20px; }
+
+  .footer-inner {
+    flex-direction: column;
+    gap: 32px;
+    min-height: unset;
+  }
+
+  .footer-contact,
+  .footer-find { padding: 0; }
+
+  .map-img { height: 220px; }
+
+  .footer-heading {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--Blue);
+
+}
+
+.footer-brand {
+  align-items: center;
+  width: 100%;
+}
+
+.footer-logo {
+  width: 120px;
+  height: auto;
+}
+}
+
+@media (max-width: 768px) {
+  .page-content { padding: 40px 20px; }
+
+  .story-block { flex-direction: column; gap: 24px; }
+
+  .story-img { width: 100%; height: 260px; }
+
+  .story-heading { font-size: 26px; }
+
+  .team-section { padding: 32px 20px; }
+
+  .team-row { flex-direction: column; }
+
+  .team-photo-wrap { width: 100%; height: 320px; }
+
+  .team-photo {
+    object-position: top center;
+  }
+
+  .team-card { padding: 24px 20px; }
+  
+  .team-heading {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--Blue);
+  }
+
+  .team-name {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--Blue);
+  }
+}
+
+@media (max-width: 768px) {
+  .services-tabs-section { padding: 24px 16px; }
+
+  .grooming-menu-section { padding: 24px 16px; }
+
+  .grooming-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .teeth-images { flex-direction: column; }
+}
