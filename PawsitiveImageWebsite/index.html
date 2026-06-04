@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About — Pawsitive Image</title>
+  <title>Pawsitive Image</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -19,7 +19,7 @@
       <span></span><span></span><span></span>
       </button>
       <div class="nav-links">
-        <a href="index.html"    class="nav-item">Home</a>
+        <a href="home.html"    class="nav-item">Home</a>
         <a href="about.html"    class="nav-item">About</a>
         <a href="services.html" class="nav-item">Services</a>
         <a class="book-btn nav-book-btn" href="https://wa.me/6593851366" target="_blank" rel="noopener noreferrer">
@@ -34,109 +34,86 @@
     </div>
   </nav>
 
-  <!-- PAGE HERO -->
-  <section class="page-hero">
-    <h1 class="page-hero-title">About us</h1>
-    <p class="page-hero-subtitle">
-      Established in 2015, our grooming salon brings together over a decade of hands-on experience in caring for pets. We strive to create an environment where you can entrust your pets' overall wellbeing with us.
-    </p>
+  <!-- HERO -->
+  <section id="hero" class="hero">
   </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="services-section">
+    <div class="services-grid">
  
-  <!-- OUR STORY -->
-  <section class="page-content">
-    <div class="story-block">
-      <div class="story-text">
-        <span class="story-label">Who we are</span>
-        <h2 class="story-heading">Our Story</h2>
-        <div class="story-divider"></div>
-        <p class="story-body">Pawsitive Image was envisioned by two dog lovers. We have always wanted to open a one-stop solution for pet grooming needs. We finally got started on 8/8/2015. We strive to create a safe environment to make your pets feel at home. We are also dedicated to create a pawsitive image for your furry pals.</p>
-        <p class="story-body">Our experienced groomers will check on your pet's condition and update pet owners about the grooming process. We will always apply a gentle and loving touch to make your pets well groomed and beautiful, one pet at a time!</p>
-      </div>
+      <a href="services.html#tab-grooming" class="service-card">
+        <img class="card-img" src="images/grooming.jpg" alt="Dog and cat grooming" />
+        <div class="card-body">
+          <div class="card-title">Dog &amp; cat grooming</div>
+          <div class="card-desc">Full &amp; basic grooming, dematting, undercoat removal, and more!</div>
+        </div>
+      </a>
+ 
+      <a href="services.html#tab-spa" class="service-card">
+        <img class="card-img" src="images/spa.jpg" alt="Dog spa" />
+        <div class="card-body">
+          <div class="card-title">Dog Spa</div>
+          <div class="card-desc">To give your pup the pampering they deserve</div>
+        </div>
+      </a>
+ 
+      <a href="services.html#tab-teeth" class="service-card">
+        <img class="card-img" src="images/teeth.jpg" alt="Dog teeth cleaning" />
+        <div class="card-body">
+          <div class="card-title">Non-anaesthetic dog teeth cleaning</div>
+          <div class="card-desc">Safe and comfortable removal of plaque and tartar</div>
+        </div>
+      </a>
+ 
     </div>
   </section>
   
   <hr class="section-divider">
 
- <!-- OUR TEAM -->
-  <section class="team-section">
-    <h2 class="team-heading">Our Team</h2>
- 
- 
-    <!-- Ming Quan -->
-    <div class="team-row">
-      <div class="team-photo-wrap">
-        <img class="team-photo" src="images/mingquan.png" alt="Ming Quan" />
-      </div>
-      <div class="team-card">
-        <div class="team-card-body">
-          <h3 class="team-name">Ming Quan</h3>
-          <p class="team-role">Senior pet groomer</p>
-          <p class="team-bio">Ming Quan is our head groomer. With over 15 years of experience in the pet grooming industry, he understands what is best for every pet. He has also won international awards in pet beauty competitions.</p>
-          <ul class="team-certs">
-            <li>2010 — Certificate of Professional Pet Grooming (Art of Pets Grooming School)</li>
-            <li>2012 — KCT Class C Certification</li>
-            <li>2012 — SKC Pet Safety Certification</li>
-            <li>2013 — KCT Class B Certification, 1st in Cohort</li>
-            <li>2016 — Certificate of Professional Dog Grooming, Intermediate (GEN Pet Stylist)</li>
-            <li>2021 — Certificate of Professional Dog Grooming, Advanced (GEN Pet Stylist)</li>
-            <li>2021 — SKC Class A Category 1 – Handstripping Certification</li>
-          </ul>
-        </div>
-      </div>
-    </div>
- 
-    <!-- Ivy -->
-    <div class="team-row">
-      <div class="team-photo-wrap">
-        <img class="team-photo" src="images/ivy.png" alt="Ivy" />
-      </div>
-      <div class="team-card">
-        <div class="team-card-body">
-          <h3 class="team-name">Ivy</h3>
-          <p class="team-role">Senior pet groomer</p>
-          <p class="team-bio">Ivy has over five years of experience in pet grooming and is extremely meticulous when it comes to caring for your fur kids. Pomeranians and Poodles are her forte.</p>
-          <ul class="team-certs">
-            <li>2017 — SKC Class C Certification</li>
-          </ul>
-        </div>
-      </div>
-    </div>
- 
-    <!-- Yvonne -->
-    <div class="team-row">
-      <div class="team-photo-wrap">
-        <img class="team-photo" src="images/yvonne.png" alt="Yvonne" />
-      </div>
-      <div class="team-card">
-        <div class="team-card-body">
-          <h3 class="team-name">Yvonne</h3>
-          <p class="team-role">Pet groomer</p>
-          <p class="team-bio">Yvonne has 4 years of experience grooming fur kids. She is not only skilled and meticulous, but also understands the unique needs of your pets. Feel free to ask her for any tips and tricks on taking care of your pet!</p>
-        </div>
-      </div>
-    </div>
+  <!-- PROMOTIONS — Google Drive PDF embed -->
+  <section class="promos-section">
+    <h2 class="section-title">Current promotions</h2>
 
-     <!-- Jia Ming -->
-    <div class="team-row">
-      <div class="team-photo-wrap">
-        <img class="team-photo" src="images/jiaming.jpg" alt="Jia Ming" />
-      </div>
-      <div class="team-card">
-        <div class="team-card-body">
-          <h3 class="team-name">Jia Ming</h3>
-          <p class="team-role">Pet groomer</p>
-          <p class="team-bio">Jia Ming has 1 year of grooming experience. She is extremely patient with your pets and will give them the most relaxing experience, from bath time to blow drying. </p>
-        </div>
-      </div>
+    <!--
+      HOW TO EMBED YOUR GOOGLE DRIVE PDF:
+      1. Open your PDF in Google Drive
+      2. Click Share → set to "Anyone with the link can view"
+      3. Copy the link (looks like: https://drive.google.com/file/d/FILE_ID/view)
+      4. Replace FILE_ID in the src below with your actual file ID
+    -->
+    <div class="pdf-embed-wrap">
+      <iframe
+        class="pdf-embed"
+        src="images/promotions.pdf#toolbar=0"
+        title="Current Promotions PDF"
+      ></iframe>
     </div>
+  </section>
 
-</section>
+<hr class="section-divider">
+
+  <!-- TESTIMONIALS — Elfsight Google Reviews -->
+  <section class="testimonials-section">
+
+    <!--
+      HOW TO ADD YOUR ELFSIGHT GOOGLE REVIEWS WIDGET:
+      1. Sign up / log in at https://elfsight.com
+      2. Create a "Google Reviews" widget and configure it
+      3. Copy the two-line embed snippet they give you
+      4. Paste BOTH tags below, replacing the elfsight-placeholder div
+    -->
+
+    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+    <div class="elfsight-app-7c98d678-1ca0-4c08-b91e-0d260c8dabee"></div>
+  </section>
 
   <!-- FOOTER / CONTACT -->
   <footer class="footer">
     <div class="footer-inner">
 
-     <div class="footer-brand">
+      <!-- Brand + socials -->
+      <div class="footer-brand">
         <img class="footer-logo" src="C:\Users\DNX14\OneDrive\Desktop\PawsitiveImageWebsite\images\pawsitiveimagelogoNOBG.png" alt="Logo" />
         <div class="social-icons">
           <a href="https://www.facebook.com/Pawsitiveimage.sg/" class="social-icon" aria-label="Facebook">
@@ -153,22 +130,25 @@
         </a>
       </div>
 
-
+      <!-- Contact -->
       <div class="footer-contact">
         <h3 class="footer-heading">Contact us</h3>
         <div class="footer-divider"></div>
+
         <div class="contact-row">
           <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.45 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
           </svg>
           <span>9385 1366</span>
         </div>
+
         <div class="contact-row">
           <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
           </svg>
           <span>pawsitiveimage.sg@gmail.com</span>
         </div>
+
         <div class="contact-row contact-row--top">
           <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>

@@ -100,7 +100,7 @@ body {
 /* ── HERO ────────────────────────────────────────────────── */
 .hero {
   width: 100%;
-  min-height: 400px;
+  min-height: 520px;
   padding: 64px;
   background:
     url('images/Quality\ pet\ services\ since\ 2015.png') center/cover no-repeat;
