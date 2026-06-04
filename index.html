@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pawsitive Image</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+    <nav class="navbar">
+    <div class="navbar-inner">
+      <div class="logo-wrap">
+        <img src="C:\Users\DNX14\OneDrive\Desktop\PawsitiveImageWebsite\images\pawsitiveimagelogoNOBG.png" alt="Pawsitive Image Logo" />
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links">
+        <a href="home.html"    class="nav-item">Home</a>
+        <a href="about.html"    class="nav-item">About</a>
+        <a href="services.html" class="nav-item">Services</a>
+        <a class="book-btn nav-book-btn" href="https://wa.me/6593851366" target="_blank" rel="noopener noreferrer">
+        Book now
+        </a>
+      </div>
+      <div class="book-btn-wrap">
+      <a class="book-btn" href="https://wa.me/6593851366" target="_blank" rel="noopener noreferrer">
+        Book now
+      </a>
+    </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero" class="hero">
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="services-section">
+    <div class="services-grid">
+ 
+      <a href="services.html#tab-grooming" class="service-card">
+        <img class="card-img" src="images/grooming.jpg" alt="Dog and cat grooming" />
+        <div class="card-body">
+          <div class="card-title">Dog &amp; cat grooming</div>
+          <div class="card-desc">Full &amp; basic grooming, dematting, undercoat removal, and more!</div>
+        </div>
+      </a>
+ 
+      <a href="services.html#tab-spa" class="service-card">
+        <img class="card-img" src="images/spa.jpg" alt="Dog spa" />
+        <div class="card-body">
+          <div class="card-title">Dog Spa</div>
+          <div class="card-desc">To give your pup the pampering they deserve</div>
+        </div>
+      </a>
+ 
+      <a href="services.html#tab-teeth" class="service-card">
+        <img class="card-img" src="images/teeth.jpg" alt="Dog teeth cleaning" />
+        <div class="card-body">
+          <div class="card-title">Non-anaesthetic dog teeth cleaning</div>
+          <div class="card-desc">Safe and comfortable removal of plaque and tartar</div>
+        </div>
+      </a>
+ 
+    </div>
+  </section>
+  
+  <hr class="section-divider">
+
+  <!-- PROMOTIONS — Google Drive PDF embed -->
+  <section class="promos-section">
+    <h2 class="section-title">Current promotions</h2>
+
+    <!--
+      HOW TO EMBED YOUR GOOGLE DRIVE PDF:
+      1. Open your PDF in Google Drive
+      2. Click Share → set to "Anyone with the link can view"
+      3. Copy the link (looks like: https://drive.google.com/file/d/FILE_ID/view)
+      4. Replace FILE_ID in the src below with your actual file ID
+    -->
+    <div class="pdf-embed-wrap">
+      <iframe
+        class="pdf-embed"
+        src="images/promotions.pdf#toolbar=0"
+        title="Current Promotions PDF"
+      ></iframe>
+    </div>
+  </section>
+
+<hr class="section-divider">
+
+  <!-- TESTIMONIALS — Elfsight Google Reviews -->
+  <section class="testimonials-section">
+
+    <!--
+      HOW TO ADD YOUR ELFSIGHT GOOGLE REVIEWS WIDGET:
+      1. Sign up / log in at https://elfsight.com
+      2. Create a "Google Reviews" widget and configure it
+      3. Copy the two-line embed snippet they give you
+      4. Paste BOTH tags below, replacing the elfsight-placeholder div
+    -->
+
+    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+    <div class="elfsight-app-7c98d678-1ca0-4c08-b91e-0d260c8dabee"></div>
+  </section>
+
+  <!-- FOOTER / CONTACT -->
+  <footer class="footer">
+    <div class="footer-inner">
+
+      <!-- Brand + socials -->
+      <div class="footer-brand">
+        <img class="footer-logo" src="C:\Users\DNX14\OneDrive\Desktop\PawsitiveImageWebsite\images\pawsitiveimagelogoNOBG.png" alt="Logo" />
+        <div class="social-icons">
+          <a href="https://www.facebook.com/Pawsitiveimage.sg/" class="social-icon" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/pawsitiveimage/" class="social-icon" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+          </a>
+        </div>
+        <a class="book-btn footer-book-btn" href="https://wa.me/6593851366" target="_blank" rel="noopener noreferrer">
+        Book now
+        </a>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-contact">
+        <h3 class="footer-heading">Contact us</h3>
+        <div class="footer-divider"></div>
+
+        <div class="contact-row">
+          <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.45 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          <span>9385 1366</span>
+        </div>
+
+        <div class="contact-row">
+          <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+          </svg>
+          <span>pawsitiveimage.sg@gmail.com</span>
+        </div>
+
+        <div class="contact-row contact-row--top">
+          <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+          </svg>
+          <span>
+            Tuesday – Friday: 9am to 5:30–6pm<br/>
+            Saturday &amp; Sunday: 9am to 8pm<br/>
+            Closed on Mondays <br/>
+            Open as usual on public holidays
+          </span>
+        </div>
+      </div>
+
+      <!-- Find us -->
+      <div class="footer-find">
+        <h3 class="footer-heading">Find us</h3>
+        <div class="footer-divider footer-divider--wide"></div>
+        <div class="contact-row">
+          <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+          </svg>
+          <span>350 Ubi Ave 1, #01-939, Singapore 400350</span>
+        </div>
+        <iframe class="map-img" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7977.4995459850925!2d103.89871561109766!3d1.326073661645091!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da181d5bd27b91%3A0xcc6a870200cbf77!2sPawsitive%20Image!5e0!3m2!1sen!2ssg!4v1778057719427!5m2!1sen!2ssg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+    </div>
+    <div class="footer-copy">© 2026 Pawsitive Image. All rights reserved.</div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
