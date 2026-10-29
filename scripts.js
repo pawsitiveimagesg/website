@@ -11,7 +11,7 @@
     if (
       ((page === '' || page === 'index.html') && href === 'index.html') ||
       (page === 'about.html'    && href === 'about.html') ||
-      (page === 'services.html' && href === 'services.html')
+      (['services.html', 'dog-grooming.html', 'dog-teeth-cleaning.html'].includes(page) && href === 'services.html')
     ) {
       link.classList.add('active');
     }
@@ -78,7 +78,13 @@ if (hamburger) {
     return page === '' || page === 'index' ? 'home' : page;
   }
 
+  const SERVICE_PAGES = {
+    'dog-grooming':       'dog grooming',
+    'dog-teeth-cleaning': 'non-anaesthetic teeth cleaning'
+  };
+
   function serviceFor(page) {
+    if (SERVICE_PAGES[page]) return SERVICE_PAGES[page];
     if (page !== 'services') return 'an appointment';
     const active = document.querySelector('.tab-btn.active');
     return (active && SERVICES[active.dataset.tab]) || 'an appointment';
