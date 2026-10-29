@@ -63,3 +63,48 @@ if (hamburger) {
     navLinks.classList.toggle('open');
   });
 }
+
+/* ── WHATSAPP: prefilled message + GA4 click tracking ─────── */
+(function () {
+  const SERVICES = {
+    grooming: 'grooming',
+    addons:   'grooming with add-ons',
+    spa:      'a Dog Spa session',
+    teeth:    'non-anaesthetic teeth cleaning'
+  };
+
+  function pageName() {
+    const page = window.location.pathname.split('/').pop().replace('.html', '');
+    return page === '' || page === 'index' ? 'home' : page;
+  }
+
+  function serviceFor(page) {
+    if (page !== 'services') return 'an appointment';
+    const active = document.querySelector('.tab-btn.active');
+    return (active && SERVICES[active.dataset.tab]) || 'an appointment';
+  }
+
+  function placement(link) {
+    if (link.classList.contains('nav-book-btn'))    return 'nav_menu';
+    if (link.classList.contains('footer-book-btn')) return 'footer';
+    return 'header';
+  }
+
+  document.querySelectorAll('a[href*="wa.me/"]').forEach(link => {
+    const base = link.href.split('?')[0];
+    link.addEventListener('click', () => {
+      const page = pageName();
+      const service = serviceFor(page);
+      const text = `Hi Pawsitive Image! I'd like to book ${service} for my pet. (via website - ${page})`;
+      link.href = `${base}?text=${encodeURIComponent(text)}`;
+
+      if (typeof gtag === 'function') {
+        gtag('event', 'whatsapp_click', {
+          page_name: page,
+          service: service,
+          button_location: placement(link)
+        });
+      }
+    });
+  });
+})();
