@@ -11,7 +11,7 @@
     if (
       ((page === '' || page === 'index.html') && href === 'index.html') ||
       (page === 'about.html'    && href === 'about.html') ||
-      (['services.html', 'dog-grooming.html', 'dog-teeth-cleaning.html'].includes(page) && href === 'services.html')
+      (['services.html', 'dog-grooming.html', 'dog-teeth-cleaning.html', 'cat-grooming.html'].includes(page) && href === 'services.html')
     ) {
       link.classList.add('active');
     }
@@ -80,7 +80,8 @@ if (hamburger) {
 
   const SERVICE_PAGES = {
     'dog-grooming':       'dog grooming',
-    'dog-teeth-cleaning': 'non-anaesthetic teeth cleaning'
+    'dog-teeth-cleaning': 'non-anaesthetic teeth cleaning',
+    'cat-grooming':       'cat grooming'
   };
 
   function serviceFor(page) {
