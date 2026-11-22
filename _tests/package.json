@@ -1,0 +1,13 @@
+{
+  "name": "pawsitive-image-site-tests",
+  "private": true,
+  "description": "Browser tests for the Pawsitive Image review pages. The folder starts with an underscore so GitHub Pages does not publish it.",
+  "scripts": {
+    "test": "playwright test",
+    "test:live": "cross-env BASE_URL=https://www.pawsitiveimage.com.sg playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.65.1",
+    "cross-env": "7.0.3"
+  }
+}
