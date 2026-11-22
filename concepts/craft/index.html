@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Concept A, Craft | Pawsitive Image</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+:root{--navy:#112F66;--ink:#0D2450;--cream:#E3D8C7;--paper:#F6F1E8;--gold:#C08F36;--slate:#5A6679;--line:rgba(17,47,102,.18);
+  --serif:'Libre Baskerville',Georgia,serif;--sans:'Poppins',system-ui,sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--sans);font-size:16px;line-height:1.65;color:var(--navy);background:var(--paper);padding-bottom:76px}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.15;margin:0;text-wrap:balance}
+p{margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.label{font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.ribbon{background:var(--ink);color:#fff;font-size:12px;text-align:center;padding:7px 12px}
+.ribbon a{color:var(--cream)}
+
+header{border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:16px;padding-bottom:16px}
+.wm{font-family:var(--serif);font-weight:700;letter-spacing:.12em;font-size:17px;text-decoration:none}
+nav{display:none;gap:28px;font-size:14px}
+nav a{text-decoration:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-weight:600;font-size:15px;
+  border-radius:0;padding:14px 26px;background:var(--navy);color:#fff;border:1px solid var(--navy);min-height:48px}
+.btn.line{background:transparent;color:var(--navy)}
+header .btn{padding:10px 18px;min-height:40px;font-size:13px}
+
+/* hero */
+.hero{padding:44px 0 0}
+.hero h1{font-size:clamp(38px,10.5vw,84px);letter-spacing:-.015em;margin:14px 0 18px}
+.hero h1 em{font-style:italic;font-weight:400}
+.hero .sub{font-size:17px;max-width:34ch;color:var(--ink)}
+.hero .cta{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 34px}
+.arch{border-radius:999px 999px 0 0;overflow:hidden;aspect-ratio:4/5;background:var(--cream)}
+.arch img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.hero-fig{position:relative;max-width:440px;margin:0 auto}
+.seal{position:absolute;left:-6px;bottom:22px;background:var(--paper);border:1px solid var(--gold);padding:12px 14px;font-size:12px;line-height:1.35;max-width:170px}
+.seal b{font-family:var(--serif);font-size:26px;display:block;line-height:1}
+
+.proof{border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:44px}
+.proof .wrap{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.proof div{padding:20px 0}
+.proof div:nth-child(odd){border-right:1px solid var(--line);padding-right:14px}
+.proof div:nth-child(even){padding-left:16px}
+.proof div:nth-child(-n+2){border-bottom:1px solid var(--line)}
+.proof b{font-family:var(--serif);font-size:26px;display:block;line-height:1.1}
+.proof span{font-size:13px;color:var(--slate)}
+
+section{padding:64px 0}
+h2{font-size:clamp(28px,6.5vw,46px);margin:10px 0 18px}
+.lede{font-size:17px;max-width:56ch}
+
+/* scissor vs clipper */
+.split{display:grid;gap:28px}
+.split figure{margin:0}
+.split img{aspect-ratio:3/2;object-fit:cover;width:100%}
+figcaption{font-size:12px;color:var(--slate);margin-top:8px;font-style:italic;font-family:var(--serif)}
+.vs{margin-top:26px;border-top:1px solid var(--line)}
+.vs div{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:14px 0;border-bottom:1px solid var(--line);font-size:14px}
+.vs .h{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--slate)}
+.vs div span:first-child{color:var(--slate)}
+.vs div span:last-child{font-weight:600}
+
+/* services */
+.band{background:var(--cream)}
+.svc{list-style:none;margin:26px 0 0;padding:0;border-top:1px solid var(--navy)}
+.svc li{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;padding:22px 0;border-bottom:1px solid var(--line)}
+.svc .n{font-family:var(--serif);font-style:italic;color:var(--gold);font-size:18px;padding-top:4px}
+.svc h3{font-size:23px}
+.svc p{grid-column:2;font-size:15px;max-width:52ch}
+.svc .meta{grid-column:2;display:flex;gap:18px;font-size:13px;font-weight:600;margin-top:4px}
+.svc .meta span+span{color:var(--slate);font-weight:400}
+
+/* groomer */
+.groomer{display:grid;gap:28px;align-items:start}
+.groomer .ph{background:var(--cream);aspect-ratio:1/1;overflow:hidden;max-width:360px}
+.groomer .ph img{width:100%;height:100%;object-fit:cover}
+.years{list-style:none;margin:20px 0 0;padding:0;font-size:14px}
+.years li{display:grid;grid-template-columns:56px 1fr;gap:10px;padding:9px 0;border-top:1px solid var(--line)}
+.years b{font-family:var(--serif);color:var(--gold)}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:26px}
+.gal img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/5}
+.gal .wide{grid-column:1/-1}
+.gal .wide img{aspect-ratio:16/9}
+
+.close{background:var(--navy);color:#fff;text-align:center}
+.close h2{color:#fff}
+.close p{color:var(--cream);max-width:44ch;margin:0 auto 26px}
+.close .btn{background:var(--paper);color:var(--navy);border-color:var(--paper)}
+.info{display:grid;gap:22px;margin-top:44px;padding-top:30px;border-top:1px solid rgba(227,216,199,.3);text-align:left;font-size:14px;color:var(--cream)}
+.info b{display:block;color:#fff;font-size:11px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:6px}
+footer{background:var(--ink);color:rgba(255,255,255,.7);font-size:12px;padding:18px 0}
+
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--paper);border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom))}
+.dock .btn{width:100%;background:#1FA855;border-color:#1FA855}
+
+@media (min-width:860px){
+  body{padding-bottom:0}.dock{display:none}
+  nav{display:flex}
+  .hero{padding-top:70px}
+  .hero .wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:end}
+  .hero-fig{margin:0}
+  .proof .wrap{grid-template-columns:repeat(4,1fr)}
+  .proof div{border-bottom:0 !important;border-right:1px solid var(--line);padding:26px 22px !important}
+  .proof div:first-child{padding-left:0 !important}.proof div:last-child{border-right:0}
+  section{padding:104px 0}
+  .split{grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+  .svc li{grid-template-columns:70px 1.1fr 1.4fr auto;align-items:baseline}
+  .svc p,.svc .meta{grid-column:auto;margin:0}
+  .svc .meta{flex-direction:column;gap:2px;text-align:right}
+  .groomer{grid-template-columns:360px 1fr;gap:64px}
+  .gal{grid-template-columns:repeat(4,1fr)}
+  .gal .wide{grid-column:span 2}.gal .wide img{aspect-ratio:auto;height:100%}
+  .info{grid-template-columns:repeat(3,1fr)}
+}
+</style>
+</head>
+<body>
+<div class="ribbon">Concept A of 3 · Craft · draft with placeholder photos and prices · <a href="../">see all three</a></div>
+
+<header><div class="wrap">
+  <a class="wm" href="#">Pawsitive Image</a>
+  <nav><a href="#craft">The craft</a><a href="#services">Services</a><a href="#groomer">Our groomers</a><a href="#visit">Visit</a></nav>
+  <a class="btn" href="https://wa.me/6593851366?text=Hello%20Pawsitive%20Image%2C%20I%27d%20like%20to%20book%20a%20groom.">Book</a>
+</div></header>
+
+<div class="hero"><div class="wrap">
+  <div>
+    <span class="label">Ubi, Singapore · Est. 2015</span>
+    <h1>Hand-scissored grooming, <em>since 2015</em></h1>
+    <p class="sub">Every full groom is finished by hand with scissors, by certified groomers led by an international award winner.</p>
+    <div class="cta">
+      <a class="btn" href="https://wa.me/6593851366?text=Hello%20Pawsitive%20Image%2C%20I%27d%20like%20to%20book%20a%20groom.">Book on WhatsApp</a>
+      <a class="btn line" href="#services">See services and prices</a>
+    </div>
+  </div>
+  <div class="hero-fig">
+    <div class="arch"><img src="../img/poodle-standing.jpg" alt="A white standard poodle with a hand-scissored finish" width="900" height="1350" /></div>
+    <div class="seal"><b>15+</b>years of grooming experience, our head groomer</div>
+  </div>
+</div></div>
+
+<div class="proof"><div class="wrap">
+  <div><b>2015</b><span>Grooming in Ubi since 8 August 2015</span></div>
+  <div><b>Award</b><span>International award-winning head groomer</span></div>
+  <div><b>Class A</b><span>SKC hand-stripping certification</span></div>
+  <div><b>4.X</b><span>Google rating, to be confirmed</span></div>
+</div></div>
+
+<section id="craft"><div class="wrap split">
+  <figure>
+    <img src="../img/scissors.jpg" alt="A groomer scissoring a small dog's coat by hand" width="1200" height="800" loading="lazy" />
+    <figcaption>Scissor work around the face and legs takes time. That is the point.</figcaption>
+  </figure>
+  <div>
+    <span class="label">The craft</span>
+    <h2>The difference is in the scissors</h2>
+    <p class="lede">Most salons finish a coat with clippers because it is fast. We shape it by hand, which follows your dog's build and keeps its shape as the coat grows out.</p>
+    <div class="vs">
+      <div class="h"><span>Clipper cut</span><span>Hand-scissored</span></div>
+      <div><span>One length all over</span><span>Shaped to your dog's build</span></div>
+      <div><span>Quick to do</span><span>More time on every dog</span></div>
+      <div><span>Grows out unevenly</span><span>Keeps its shape between visits</span></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="services" class="band"><div class="wrap">
+  <span class="label">Services</span>
+  <h2>What we do, and what it costs</h2>
+  <p class="lede">Prices depend on size, coat and condition. We tell you the price before we start.</p>
+  <ul class="svc">
+    <li><span class="n">01</span><h3>Full groom</h3><p>Overall check, bath, blow dry, nails, ears, paw pads, and a hand-scissored haircut and styling.</p><div class="meta"><span>From $X</span><span>About X hours</span></div></li>
+    <li><span class="n">02</span><h3>Basic groom</h3><p>Everything in a full groom except the haircut: a tidy of the paws and eye area instead.</p><div class="meta"><span>From $X</span><span>About X hours</span></div></li>
+    <li><span class="n">03</span><h3>Hand-stripping</h3><p>For wire-coated breeds, done by an SKC Class A certified groomer.</p><div class="meta"><span>From $X</span><span>By appointment</span></div></li>
+    <li><span class="n">04</span><h3>Sea-salt spa bath</h3><p>A nanobubble sea-salt soak many owners add for dogs with sensitive skin.</p><div class="meta"><span>From $X</span><span>Add to any groom</span></div></li>
+  </ul>
+</div></section>
+
+<section id="groomer"><div class="wrap groomer">
+  <div class="ph"><img src="../../images/mingquan.png" alt="Ming Quan, head groomer at Pawsitive Image" loading="lazy" /></div>
+  <div>
+    <span class="label">Head groomer</span>
+    <h2>Ming Quan sets the finish</h2>
+    <p class="lede">More than 15 years in grooming, with international competition awards. He sets the standard every dog leaves with, and checks it.</p>
+    <ul class="years">
+      <li><b>2010</b><span>Certificate of Professional Pet Grooming</span></li>
+      <li><b>2013</b><span>KCT Class B certification, first in cohort</span></li>
+      <li><b>2021</b><span>Advanced Professional Dog Grooming, GEN Pet Stylist</span></li>
+      <li><b>2021</b><span>SKC Class A, hand-stripping certification</span></li>
+    </ul>
+  </div>
+</div></section>
+
+<section class="band"><div class="wrap">
+  <span class="label">Recent finishes</span>
+  <h2>The Pawsitive Image finish</h2>
+  <div class="gal">
+    <div class="wide"><img src="../img/poodle-side.jpg" alt="White poodle standing in profile" loading="lazy" /></div>
+    <div><img src="../img/maltese.jpg" alt="Small white dog after a groom" loading="lazy" /></div>
+    <div><img src="../img/poodles-pair.jpg" alt="Two grey poodles" loading="lazy" /></div>
+  </div>
+</div></section>
+
+<section id="visit" class="close"><div class="wrap">
+  <span class="label">Book</span>
+  <h2>Tell us about your dog</h2>
+  <p>Send the breed and when they were last groomed. We will recommend the right groom and give you the price.</p>
+  <a class="btn" href="https://wa.me/6593851366?text=Hello%20Pawsitive%20Image%2C%20I%27d%20like%20to%20book%20a%20groom.">Book on WhatsApp</a>
+  <div class="info">
+    <div><b>Find us</b>350 Ubi Ave 1, #01-939<br />Singapore 400350</div>
+    <div><b>Hours</b>Tuesday to Friday: 9am to 5:30–6pm<br />Saturday and Sunday: 9am to 8pm<br />Closed on Mondays</div>
+    <div><b>Contact</b>WhatsApp or call 9385 1366<br />pawsitiveimage.sg@gmail.com</div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">Concept draft, not the live site. Photographs are placeholders from Pexels, except the team photo. Prices, rating and award details to be confirmed.</div></footer>
+
+<div class="dock"><a class="btn" href="https://wa.me/6593851366?text=Hello%20Pawsitive%20Image%2C%20I%27d%20like%20to%20book%20a%20groom.">Book on WhatsApp</a></div>
+</body>
+</html>

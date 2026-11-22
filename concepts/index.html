@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Landing page concepts | Pawsitive Image</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+<style>
+:root{--navy:#112F66;--cream:#E3D8C7;--paper:#F6F1E8;--gold:#C08F36;--slate:#5A6679}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Poppins',system-ui,sans-serif;font-size:16px;line-height:1.6;color:var(--navy);background:var(--paper)}
+.wrap{max-width:1080px;margin:0 auto;padding:36px 18px 48px}
+h1,h2{font-family:'Libre Baskerville',Georgia,serif;margin:0;line-height:1.2;text-wrap:balance}
+h1{font-size:clamp(28px,7vw,44px);margin:8px 0 12px}
+.label{font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+p{margin:0}
+.intro{max-width:60ch}
+.grid{display:grid;gap:18px;margin-top:30px}
+a.card{display:block;background:#fff;border-radius:16px;overflow:hidden;text-decoration:none;color:inherit;border:1px solid var(--cream)}
+a.card img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:50% 22%}
+.card .b{padding:18px 20px 22px}
+.card h2{font-size:22px;margin:6px 0 8px}
+.card p{font-size:15px;color:var(--slate)}
+.card dl{margin:14px 0 0;font-size:14px;display:grid;grid-template-columns:auto 1fr;gap:4px 12px}
+.card dt{font-weight:600}.card dd{margin:0;color:var(--slate)}
+.card .go{display:inline-block;margin-top:16px;font-weight:600;border-bottom:2px solid var(--gold)}
+.foot{margin-top:30px;font-size:13px;color:var(--slate)}
+.foot a{color:var(--navy);font-weight:600}
+@media (min-width:860px){.grid{grid-template-columns:repeat(3,1fr)}}
+</style>
+</head>
+<body><div class="wrap">
+  <span class="label">Pawsitive Image · for review</span>
+  <h1>Three landing page concepts</h1>
+  <p class="intro">Each one leads with a different reason to choose Pawsitive Image, and each has its own look. Open them on your phone, then tell us which message and which look you prefer. They do not have to be the same one.</p>
+  <div class="grid">
+    <a class="card" href="craft/"><img src="img/poodle-standing.jpg" alt="" />
+      <div class="b"><span class="label">Concept A</span><h2>Craft</h2><p>"Hand-scissored grooming, since 2015."</p>
+      <dl><dt>Leads with</dt><dd>The skill: scissors against clippers, the head groomer</dd><dt>Look</dt><dd>Editorial. Cream paper, large serif type, square edges</dd></dl><span class="go">Open concept A</span></div></a>
+    <a class="card" href="care/"><img src="img/groomer-table.jpg" alt="" />
+      <div class="b"><span class="label">Concept B</span><h2>Care</h2><p>"A groomer stays with your dog, start to finish."</p>
+      <dl><dt>Leads with</dt><dd>Safety and trust: three promises, the visit step by step, the team</dd><dt>Look</dt><dd>Warm boutique. White, rounded cards, soft gold</dd></dl><span class="go">Open concept B</span></div></a>
+    <a class="card" href="finish/"><img src="img/poodle-golden.jpg" alt="" />
+      <div class="b"><span class="label">Concept C</span><h2>The Finish</h2><p>"Finished by hand. Priced up front. Booked ahead."</p>
+      <dl><dt>Leads with</dt><dd>The result and no surprises: prices on the page, the next slot held</dd><dt>Look</dt><dd>Bold and modern. Dark navy, very large type, gold blocks</dd></dl><span class="go">Open concept C</span></div></a>
+  </div>
+  <p class="foot">Drafts only. Photographs are placeholders from Pexels except the team photos; prices show as "$X" until confirmed. See also the <a href="../brand-guide/">brand guide</a>.</p>
+</div></body>
+</html>
