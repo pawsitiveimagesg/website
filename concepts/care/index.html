@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Concept B, Care | Pawsitive Image</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,700;1,400&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root{--navy:#112F66;--cream:#E3D8C7;--soft:#F7F2EA;--gold:#C08F36;--goldsoft:#F3E7CF;--slate:#5A6679;--white:#fff;
+  --serif:'Libre Baskerville',Georgia,serif;--sans:'Poppins',system-ui,sans-serif;--r:22px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--sans);font-size:16px;line-height:1.65;color:var(--navy);background:var(--white);padding-bottom:84px}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{margin:0;line-height:1.2;text-wrap:balance}
+h1,h2{font-family:var(--serif);font-weight:700}
+h1 em,h2 em{font-style:italic;font-weight:400;color:var(--gold)}
+p{margin:0}
+.wrap{max-width:1080px;margin:0 auto;padding:0 18px}
+.ribbon{background:var(--goldsoft);font-size:12px;text-align:center;padding:7px 12px}
+.pill{display:inline-flex;align-items:center;gap:8px;background:var(--goldsoft);border-radius:999px;padding:6px 14px;font-size:13px;font-weight:600}
+.pill i{width:8px;height:8px;border-radius:50%;background:var(--gold)}
+
+header .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:14px;padding-bottom:14px}
+.wm{font-family:var(--serif);font-weight:700;font-size:18px;text-decoration:none}
+nav{display:none;gap:26px;font-size:14px;font-weight:500}
+nav a{text-decoration:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-weight:600;font-size:15px;
+  border-radius:999px;padding:14px 24px;background:var(--navy);color:#fff;min-height:48px}
+.btn.wa{background:#1FA855}
+.btn.soft{background:var(--soft);color:var(--navy)}
+.btn.sm{padding:10px 18px;min-height:40px;font-size:14px}
+
+/* hero */
+.hero{padding:10px 0 0}
+.hero .card{position:relative;border-radius:var(--r);overflow:hidden;background:var(--navy);color:#fff}
+.hero .card img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:70% 40%}
+.hero .txt{position:relative;z-index:1;padding:22px 20px 26px}
+.dock .btn{white-space:nowrap;font-size:14px;padding-left:14px;padding-right:14px}
+.hero h1{font-size:clamp(32px,8.6vw,58px);margin:14px 0 12px;color:#fff}
+.hero h1 em{color:#F0D9A8}
+.hero p{max-width:40ch;color:rgba(255,255,255,.92)}
+.hero .cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.hero .pill{background:rgba(255,255,255,.16);color:#fff;backdrop-filter:blur(6px)}
+
+.badges{display:grid;gap:10px;margin-top:14px}
+.badge{background:var(--soft);border-radius:var(--r);padding:18px 20px;display:flex;gap:14px;align-items:center}
+.badge b{font-family:var(--serif);font-size:28px;line-height:1;color:var(--gold);min-width:64px}
+.badge span{font-size:14px;font-weight:500}
+
+section{padding:56px 0}
+.eyebrow{font-size:13px;font-weight:600;color:var(--gold);margin-bottom:8px;display:block}
+h2{font-size:clamp(27px,6.4vw,42px);margin-bottom:14px}
+.lede{max-width:56ch;color:#243a66}
+
+/* promises */
+.promises{display:grid;gap:14px;margin-top:26px}
+.promise{border:1.5px solid var(--cream);border-radius:var(--r);padding:22px}
+.promise svg{width:38px;height:38px;stroke:var(--gold);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;margin-bottom:12px}
+.promise h3{font-size:18px;font-weight:600;margin-bottom:6px}
+.promise p{font-size:15px;color:var(--slate)}
+
+/* visit steps */
+.soft{background:var(--soft)}
+.visit{display:grid;gap:30px}
+.visit .ph{border-radius:var(--r);overflow:hidden}
+.visit .ph img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.steps{list-style:none;margin:22px 0 0;padding:0;counter-reset:s}
+.steps li{counter-increment:s;position:relative;padding:0 0 22px 54px}
+.steps li::before{content:counter(s);position:absolute;left:0;top:0;width:36px;height:36px;border-radius:50%;background:#fff;border:1.5px solid var(--gold);
+  display:grid;place-items:center;font-weight:600;font-size:15px}
+.steps li:not(:last-child)::after{content:"";position:absolute;left:17.5px;top:40px;bottom:4px;width:1.5px;background:var(--cream)}
+.steps b{display:block;font-weight:600}
+.steps span{font-size:15px;color:var(--slate)}
+
+/* services */
+.cards{display:grid;gap:14px;margin-top:26px}
+.svc{background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:0 1px 0 var(--cream),0 10px 30px rgba(17,47,102,.07)}
+.svc img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.svc .b{padding:18px 20px 20px}
+.svc h3{font-size:19px;font-weight:600}
+.svc p{font-size:15px;color:var(--slate);margin:6px 0 14px}
+.svc .row{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.svc .price{font-weight:600}
+.svc .price small{display:block;font-weight:400;font-size:12px;color:var(--slate)}
+
+/* team */
+.team{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:26px}
+.member{background:var(--soft);border-radius:var(--r);padding:14px;text-align:center}
+.member img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:16px;background:var(--cream);margin-bottom:10px}
+.member b{display:block;font-weight:600}
+.member span{font-size:13px;color:var(--slate);display:block;line-height:1.4}
+
+/* faq */
+.faq{margin-top:22px;display:grid;gap:10px}
+details{background:#fff;border-radius:16px;padding:0 18px}
+summary{cursor:pointer;list-style:none;padding:16px 28px 16px 0;font-weight:600;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:0;top:12px;font-size:22px;font-weight:400;color:var(--gold)}
+details[open] summary::after{content:"–"}
+details p{padding:0 0 18px;font-size:15px;color:var(--slate)}
+
+.close .card{background:var(--navy);color:#fff;border-radius:var(--r);padding:36px 22px;text-align:center}
+.close h2{color:#fff}
+.close p{color:var(--cream);max-width:42ch;margin:0 auto 22px}
+.info{display:grid;gap:14px;margin-top:14px}
+.info div{background:var(--soft);border-radius:var(--r);padding:18px 20px;font-size:14px}
+.info b{display:block;font-weight:600;margin-bottom:4px}
+footer{font-size:12px;color:var(--slate);padding:24px 0 12px}
+
+.dock{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:20;background:#fff;border-radius:999px;padding:8px;
+  box-shadow:0 10px 30px rgba(17,47,102,.22);display:flex;gap:8px}
+.dock .btn{flex:1}
+.dock .btn.soft{flex:0 0 auto}
+
+@media (min-width:860px){
+  body{padding-bottom:0}.dock{display:none}nav{display:flex}
+  .hero .card{min-height:620px;display:flex;align-items:flex-end}
+  .hero .card img{position:absolute;inset:0;height:100%;aspect-ratio:auto;object-position:62% 40%}
+  .hero .card::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,36,80,.9) 0%,rgba(13,36,80,.55) 45%,rgba(13,36,80,0) 75%)}
+  .hero .txt{padding:48px;max-width:620px}
+  .badges{grid-template-columns:repeat(3,1fr)}
+  section{padding:92px 0}
+  .promises{grid-template-columns:repeat(3,1fr)}
+  .visit{grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+  .cards{grid-template-columns:repeat(3,1fr)}
+  .team{grid-template-columns:repeat(4,1fr)}
+  .faqwrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px}
+  .info{grid-template-columns:repeat(3,1fr)}
+  .close .card{padding:64px}
+}
+</style>
+</head>
+<body>
+<div class="ribbon">Concept B of 3 · Care · draft with placeholder photos and prices · <a href="../">see all three</a></div>
+
+<header><div class="wrap">
+  <a class="wm" href="#">Pawsitive Image</a>
+  <nav><a href="#promise">Our promise</a><a href="#visit">A visit</a><a href="#services">Services</a><a href="#team">Team</a><a href="#faq">Questions</a></nav>
+  <a class="btn sm" href="https://wa.me/6593851366?text=Hello%20Pawsitive%20Image%2C%20I%27d%20like%20to%20book%20a%20groom.">Book</a>
+</div></header>
+
+<div class="hero"><div class="wrap">
+  <div class="card">
+    <img src="../img/groomer-table.jpg" alt="A groomer steadying a small dog on the grooming table" width="1200" height="800" />
+    <div class="txt">
+      <span class="pill"><i></i>Grooming in Ubi since 2015</span>
+      <h1>A groomer stays with your dog, <em>start to finish</em></h1>
+      <p>Hand-scissored grooming by certified groomers who take it at your dog's pace, and tell you how it went.</p>
+      <div class="cta">
+        <a class="btn wa" href="https://wa.me/6593851366?text=Hello%20Pawsitive%20Image%2C%20I%27d%20like%20to%20book%20a%20groom.">Book on WhatsApp</a>
+        <a class="btn soft" href="#visit">What happens at a visit</a>
+      </div>
+    </div>
+  </div>
+  <div class="badges">
+    <div class="badge"><b>15+</b><span>years of experience, our head groomer</span></div>
+    <div class="badge"><b>SKC</b><span>Pet Safety and Class A certified</span></div>
+    <div class="badge"><b>4.X</b><span>Google rating, to be confirmed</span></div>
+  </div>
+</div></div>
+
+<section id="promise"><div class="wrap">
+  <span class="eyebrow">Our promise</span>
+  <h2>Three things you can <em>count on</em></h2>
+  <p class="lede">You are handing over a member of the family. These are the things we do on every visit.</p>
+  <div class="promises">
+    <div class="promise">
+      <svg viewBox="0 0 40 40"><circle cx="20" cy="13" r="6"/><path d="M8 34c1-7 6-11 12-11s11 4 12 11"/></svg>
+      <h3>Never left alone</h3><p>A groomer is with your dog for the whole groom, from the first check to the final finish.</p>
+    </div>
+    <div class="promise">
+      <svg viewBox="0 0 40 40"><rect x="9" y="6" width="22" height="28" rx="3"/><path d="M14 14h12M14 20h12M14 26h7"/></svg>
+      <h3>Every groom recorded</h3><p>We note your dog's coat, skin and anything we find, so the next visit starts where this one ended.</p>
+    </div>
+    <div class="promise">
+      <svg viewBox="0 0 40 40"><path d="M20 33S7 25 7 16a7 7 0 0 1 13-3 7 7 0 0 1 13 3c0 9-13 17-13 17z"/></svg>
+      <h3>At your dog's pace</h3><p>Nervous and elderly dogs get time to settle and breaks when they need them.</p>
+    </div>
+  </div>
+</div></section>
+
+<section id="visit" class="soft"><div class="wrap visit">
+  <div class="ph"><img src="../img/comb.jpg" alt="A groomer combing a small dog's coat" width="1000" height="667" loading="lazy" /></div>
+  <div>
+    <span class="eyebrow">A visit, step by step</span>
+    <h2>What happens while <em>you are away</em></h2>
+    <ol class="steps">
+      <li><b>Overall check</b><span>We look over coat, skin, ears, nails and paws, and tell you the price before we start.</span></li>
+      <li><b>Bath and gentle dry</b><span>Shampoo, then blow drying and brushing by hand.</span></li>
+      <li><b>Nails, ears and paws</b><span>Clipped, cleaned and tidied.</span></li>
+      <li><b>Hand-scissored finish</b><span>Shaped by hand to suit your dog's build.</span></li>
+      <li><b>Update for you</b><span>We tell you how your dog was and anything we noticed.</span></li>
+    </ol>
+  </div>
+</div></section>
+
+<section id="services"><div class="wrap">
+  <span class="eyebrow">Services</span>
+  <h2>Choose the <em>right groom</em></h2>
+  <p class="lede">Prices depend on size, coat and condition. Message us your dog's breed and we will confirm.</p>
+  <div class="cards">
+    <div class="svc"><img src="../img/groomer-finish.jpg" alt="A groomer finishing a small dog's coat" loading="lazy" />
+      <div class="b"><h3>Full groom</h3><p>Check, bath, dry, nails, ears, paws and a hand-scissored haircut.</p>
+      <div class="row"><span class="price">From $X<small>About X hours</small></span><a class="btn sm wa" href="https://wa.me/6593851366?text=Hello%20Pawsitive%20Image%2C%20I%27d%20like%20to%20book%20a%20full%20groom.">Book</a></div></div></div>
+    <div class="svc"><img src="../img/yorkie-bath.jpg" alt="A small dog resting at the bath" loading="lazy" />
+      <div class="b"><h3>Basic groom</h3><p>Everything except the haircut, with a tidy of the paws and eye area.</p>
+      <div class="row"><span class="price">From $X<small>About X hours</small></span><a class="btn sm wa" href="https://wa.me/6593851366?text=Hello%20Pawsitive%20Image%2C%20I%27d%20like%20to%20book%20a%20basic%20groom.">Book</a></div></div></div>
+    <div class="svc"><img src="../img/brush.jpg" alt="A small dog being brushed" loading="lazy" />
+      <div class="b"><h3>Sea-salt spa bath</h3><p>A nanobubble soak many owners choose for dogs with sensitive skin.</p>
+      <div class="row"><span class="price">From $X<small>Add to any groom</small></span><a class="btn sm wa" href="https://wa.me/6593851366?text=Hello%20Pawsitive%20Image%2C%20I%27d%20like%20to%20ask%20about%20the%20spa%20bath.">Ask</a></div></div></div>
+  </div>
+</div></section>
+
+<section id="team" class="soft"><div class="wrap">
+  <span class="eyebrow">The team</span>
+  <h2>The people who will <em>look after your dog</em></h2>
+  <div class="team">
+    <div class="member"><img src="../../images/mingquan.png" alt="Ming Quan" loading="lazy" /><b>Ming Quan</b><span>Head groomer, 15+ years, international award winner</span></div>
+    <div class="member"><img src="../../images/ivy.png" alt="Ivy" loading="lazy" /><b>Ivy</b><span>Senior groomer, Pomeranians and Poodles</span></div>
+    <div class="member"><img src="../../images/yvonne.png" alt="Yvonne" loading="lazy" /><b>Yvonne</b><span>Groomer, 4 years' experience</span></div>
+    <div class="member"><img src="../../images/jiaming.jpg" alt="Jia Ming" loading="lazy" /><b>Jia Ming</b><span>Groomer, patient with nervous dogs</span></div>
+  </div>
+</div></section>
+
+<section id="faq" class="soft" style="padding-top:0"><div class="wrap faqwrap">
+  <div><span class="eyebrow">Questions</span><h2>Things owners <em>ask us</em></h2></div>
+  <div class="faq">
+    <details open><summary>My dog is nervous. Can you still groom them?</summary><p>Yes. We give your dog time to settle after drop-off and take breaks during the groom. If your dog shows severe stress, we stop and tell you.</p></details>
+    <details><summary>Will my dog be left in a cage?</summary><p>A groomer stays with your dog throughout the groom. Tell us if your dog has any worries and we will plan around them.</p></details>
+    <details><summary>How often should my dog be groomed?</summary><p>Most dogs do well on a four to six week cycle. We will suggest a date at pick-up and can hold the same slot for you.</p></details>
+    <details><summary>When should I see a vet instead?</summary><p>If your dog has open sores, a skin infection, loose teeth or bleeding gums, please see your vet first.</p></details>
+  </div>
+</div></section>
+
+<section class="close"><div class="wrap">
+  <div class="card">
+    <h2>Tell us about <em>your dog</em></h2>
+    <p>Send the breed and when they were last groomed. We will recommend the right groom and give you the price.</p>
+    <a class="btn wa" href="https://wa.me/6593851366?text=Hello%20Pawsitive%20Image%2C%20I%27d%20like%20to%20book%20a%20groom.">Book on WhatsApp</a>
+  </div>
+  <div class="info">
+    <div><b>Find us</b>350 Ubi Ave 1, #01-939, Singapore 400350</div>
+    <div><b>Hours</b>Tue to Fri: 9am to 5:30–6pm · Sat and Sun: 9am to 8pm · Closed Mondays</div>
+    <div><b>Contact</b>WhatsApp or call 9385 1366</div>
+  </div>
+  <footer>Concept draft, not the live site. Photographs are placeholders from Pexels, except the team photos. Prices, rating and the three promises to be confirmed by the salon before use.</footer>
+</div></section>
+
+<div class="dock">
+  <a class="btn wa" href="https://wa.me/6593851366?text=Hello%20Pawsitive%20Image%2C%20I%27d%20like%20to%20book%20a%20groom.">Book on WhatsApp</a>
+  <a class="btn soft" href="tel:+6593851366">Call</a>
+</div>
+</body>
+</html>
