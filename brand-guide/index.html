@@ -439,6 +439,8 @@ Book on WhatsApp</span></div>
   <div class="sheet">
     <h2 id="rvTitle">Your comments</h2>
     <div id="rvList" class="list"></div>
+    <label class="f" for="rvOverall">Overall comment</label>
+    <textarea id="rvOverall" placeholder="Anything about the guide as a whole" style="min-height:84px;margin-bottom:14px"></textarea>
     <label class="f" for="rvName">Your name (optional)</label>
     <input type="text" id="rvName" autocomplete="given-name" placeholder="So we know who commented" />
     <div class="stack">
@@ -563,17 +565,29 @@ Book on WhatsApp</span></div>
 
   // ----- review sheet
   var review = document.getElementById('review'), rvList = document.getElementById('rvList'), rvName = document.getElementById('rvName');
+  var rvOverall = document.getElementById('rvOverall'), OVERALL_KEY = 'pi-brand-guide-overall-v1';
   try { rvName.value = localStorage.getItem(NAME_KEY) || ''; } catch (e) {}
+  try { rvOverall.value = localStorage.getItem(OVERALL_KEY) || ''; } catch (e) {}
   rvName.addEventListener('input', function () { try { localStorage.setItem(NAME_KEY, rvName.value); } catch (e) {} });
+  rvOverall.addEventListener('input', function () {
+    try { localStorage.setItem(OVERALL_KEY, rvOverall.value); } catch (e) {}
+    setSendState();
+  });
+
+  // Send buttons work as soon as there is anything to send: a line comment or an overall comment.
+  function setSendState() {
+    var empty = ids().length === 0 && !rvOverall.value.trim();
+    ['sendWa', 'sendShare', 'sendCopy'].forEach(function (b) { document.getElementById(b).disabled = empty; });
+  }
 
   function buildList() {
     rvList.textContent = '';
     var list = ids();
-    ['sendWa', 'sendShare', 'sendCopy'].forEach(function (b) { document.getElementById(b).disabled = list.length === 0; });
     document.getElementById('sendShare').hidden = !navigator.share;
+    setSendState();
     if (!list.length) {
       var p = document.createElement('p'); p.className = 'empty';
-      p.textContent = 'Nothing yet. Close this and tap any line in the guide to comment on it.';
+      p.textContent = 'No comments on specific lines yet. Tap any line in the guide to comment on it, or write an overall comment below.';
       rvList.appendChild(p); return;
     }
     list.forEach(function (id) {
@@ -588,8 +602,9 @@ Book on WhatsApp</span></div>
     });
   }
   function message() {
-    var list = ids(), who = rvName.value.trim();
-    var out = ['Pawsitive Image brand guide: ' + list.length + (list.length === 1 ? ' comment' : ' comments') + (who ? ' from ' + who : ''), ''];
+    var list = ids(), who = rvName.value.trim(), overall = rvOverall.value.trim();
+    var out = ['Pawsitive Image brand guide: comments' + (who ? ' from ' + who : ''), ''];
+    if (overall) { out.push('Overall:'); out.push(overall); out.push(''); }
     list.forEach(function (id, i) {
       var b = blocks[id];
       out.push((i + 1) + '. [' + b.label + '] "' + b.snippet + '"');
@@ -602,7 +617,12 @@ Book on WhatsApp</span></div>
   document.getElementById('rvClose').addEventListener('click', function () { review.close(); });
   review.addEventListener('click', function (e) { if (e.target === review) review.close(); });
   document.getElementById('sendWa').addEventListener('click', function () {
-    window.open('https://wa.me/?text=' + encodeURIComponent(message()), '_blank', 'noopener');
+    // Some mobile browsers block new windows; fall back to opening WhatsApp in this tab.
+    // Comments are saved on the phone, so nothing is lost.
+    var url = 'https://wa.me/?text=' + encodeURIComponent(message());
+    var w = null;
+    try { w = window.open(url, '_blank'); } catch (e) {}
+    if (!w) location.href = url;
   });
   document.getElementById('sendShare').addEventListener('click', function () {
     navigator.share({ title: 'Pawsitive Image brand guide comments', text: message() }).catch(function () {});
