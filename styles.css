@@ -1129,3 +1129,73 @@ font-size: 20px;
 
   .teeth-images { flex-direction: column; }
 }
+
+/* ── SERVICE PAGES ────────────────────────────────────────── */
+.price-table-wrap {
+  width: 100%;
+  max-width: 700px;
+  overflow-x: auto;
+}
+
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Poppins', sans-serif;
+  color: var(--Blue);
+  background: var(--White);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.price-table th,
+.price-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #EAE6E5;
+}
+
+.price-table th {
+  background: var(--Blue);
+  color: var(--White);
+  font-weight: 700;
+}
+
+.price-table tr:last-child td { border-bottom: none; }
+
+.price-note {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  color: var(--Blue);
+  text-align: center;
+  max-width: 700px;
+}
+
+.price-note a,
+.tab-more-link a {
+  color: var(--Gold);
+  font-weight: 700;
+}
+
+.tab-more-link {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  margin-top: 24px;
+}
+
+.page-cta {
+  width: 100%;
+  padding: 48px 64px;
+  background: var(--Beige);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .page-cta { padding: 32px 16px; }
+  .price-table th,
+  .price-table td { padding: 10px 12px; font-size: 14px; }
+}
